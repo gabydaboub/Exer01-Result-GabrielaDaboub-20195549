@@ -24,12 +24,6 @@ while clientes < 10000:
 		
 for registro in listaRegistro:
 	print(registro)
-
-consultaCostoTotal = input(“Quiere consultar el costo total (si o no)?” )
-while consultaCostoTotal != (“si”) and consultaCostoTotal != (“no”):
-	 print(“Hubo un error en la respuesta, por favor escriba 'si' o 'no'”)
-	 consultaCostoTotal = input(“Quiere consultar el costo total (si o no)?” )
-
-if consultaCostoTotal == ("si"):
-        print(costoTotal)
+	
+print(costoTotal)
 
