@@ -1,0 +1,32 @@
+listaRegistro = []
+clientes = 0 
+
+while clientes < 10000:
+	cliente = input("nombre del cliente: ")
+	producto = input("producto: ")
+	costo = float(input("costo ($0.00): "))
+
+	registro = dict(cliente=cliente, producto=producto, costo=costo)
+	listaRegistro.append(registro)
+	
+	parar = input(“quieres agregar otro registro (si o no)? ”)
+	while parar != (“si”) and parar != (“no”): 
+		print(“Hubo un error en la respuesta, por favor escriba 'si' o 'no'”)
+		parar = input(“quieres agregar otro registro (si o no)? ”)
+
+	if parar == (“si”):
+		clientes += 1
+	elif parar == (“no”):
+		break
+		
+for registro in listaRegistro:
+	print(registro)
+
+consultaCostoTotal = input(“Quiere consultar el costo total (si o no)?” )
+while consultaCostoTotal != (“si”) and consultaCostoTotal != (“no”):
+	 print(“Hubo un error en la respuesta, por favor escriba 'si' o 'no'”)
+	 consultaCostoTotal = input(“Quiere consultar el costo total (si o no)?” )
+
+if consultaCostoTotal == ("si"):
+        costos = float(sum(costo))
+        print(costos)
