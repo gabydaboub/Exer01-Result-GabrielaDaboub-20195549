@@ -24,6 +24,7 @@ while clientes < 10000:
 		
 for registro in listaRegistro:
 	print(registro)
-	
-print(costoTotal)
+
+print("costo total->"+costoTotal)
+
 
